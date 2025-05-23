@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>archive44courscharlemagne</title>
+  <link rel="stylesheet" href="/style/style_chambre.css">
+</head>
+<body>
+   <div class="header">
+    <div class="logo">
+      <a href="/main.html"><img src="/images/logo/adresse_1.png" alt="logo" /></a></div>
+    <div class="menu">
+      <a href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+  <path d="M6 24H42M6 12H42M6 36H42" stroke="#0071DD" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+      <div class="menu-box">
+        <p><a href="/floorplan.html">couloir</a></p>
+        <p><a href="/cuisine.html">cuisine</a></p>
+        <p><a href="/atelier.html">atelier</a></div></p>
+      </div>
+  </div>
+<div id="canvas"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.style.opacity = 1;
+
+  // 메뉴 토글
+  const menu = document.querySelector(".menu");
+  const menuBox = document.querySelector(".menu-box");
+
+  if (menu && menuBox) {
+    menu.addEventListener("click", (e) => {
+      e.stopPropagation();
+      menu.classList.toggle("open");
+    });
+  }
+  document.body.addEventListener('click', () => {
+  menu.classList.remove('open');
+});
+menu.addEventListener('click', e => e.stopPropagation());
+
+
+  const canvas = document.getElementById('canvas');
+  const images = [
+    "/images/photos/canvas/chiot-mimi.jpg",
+    "/images/photos/canvas/20171230_105408.jpg",
+    "/images/photos/canvas/60's-nousdeux2.jpg",
+    "/images/photos/canvas/bouteille fraise.jpg",
+    "/images/photos/canvas/donovan-plaisir double.jpg",
+    "/images/photos/canvas/elcoco2.jpg",
+    "/images/photos/canvas/douche.jpg",
+    "/images/photos/canvas/20210714_105014.jpg",
+    "/images/photos/canvas/perrache.jpg",
+    "/images/photos/canvas/truelle lauriers.jpg",
+    "/images/photos/canvas/spirale boule.jpg",
+    "/images/photos/canvas/STAMP-D.jpg",
+    "/images/photos/canvas/STAMP-F-balladur.jpg",
+    "/images/photos/canvas/vol de canards.jpg",
+    "/images/photos/canvas/IMG20230203191533.jpg",
+    "/images/photos/canvas/louisarmstrong.jpg",
+    "/images/photos/canvas/IMG_3929.jpg",
+    "/images/photos/canvas/IMG_3930.jpg",
+    "/images/photos/canvas/IMG_3928.jpg",
+    "/images/photos/canvas/IMG20221202115110.jpg",
+    "/images/photos/canvas/IMG_3927.jpg",
+    "/images/photos/canvas/000027-2.jpg",
+    "/images/photos/canvas/000028.jpg",
+    "/images/photos/canvas/000029.jpg",
+    "/images/photos/canvas/errata-logo-noir.png",
+    "/images/photos/canvas/fantome.jpg",
+    "/images/photos/canvas/plaisirs de la table.jpg",
+    "/images/photos/canvas/IMG_3927.jpg",
+    "/images/photos/canvas/cinema.jpg",
+    "/images/photos/canvas/allo-cosmos.jpg",
+
+    "/images/photos/canvas/2024-03-05-0001.jpg",
+    "/images/photos/canvas/apocalypse1.jpg",
+    "/images/photos/canvas/autoportrait-ligne claire.jpg",
+    "/images/photos/canvas/beta.jpg",
+    "/images/photos/canvas/brouillard.jpg",
+    "/images/photos/canvas/cafetiere.jpg",
+    "/images/photos/canvas/cassettes.jpg",
+    "/images/photos/canvas/compartiment-refrigéré.jpg",
+    "/images/photos/canvas/des-ptits-traits.jpeg",
+    "/images/photos/canvas/echecs.jpg",
+    "/images/photos/canvas/electron.jpg",
+    "/images/photos/canvas/electron2.jpg",
+    "/images/photos/canvas/electron3.jpg",
+    "/images/photos/canvas/errata-dessin.jpg",
+    "/images/photos/canvas/erratatv.jpg",
+    "/images/photos/canvas/etudiant-en-art-insta1.jpg",
+    "/images/photos/canvas/etudiant-en-art1.jpg",
+    "/images/photos/canvas/etudiantenart INSTA14-9.jpg",
+    "/images/photos/canvas/FauxFomoMaux-MelchiorMercure-gris-1.jpg",
+    "/images/photos/canvas/grimace-gloubi-1.jpg",
+    "/images/photos/canvas/IMG20220602115421.jpg",
+    "/images/photos/canvas/IMG20221114100103.jpg",
+    "/images/photos/canvas/king_felix-vortex-bal_tazar.jpg",
+    "/images/photos/canvas/leprincipedexplosion-tramé.jpg",
+    "/images/photos/canvas/melchior0024.jpg",
+    "/images/photos/canvas/Mmercure-nouvellesfraiches-1-trame.jpg",
+    "/images/photos/canvas/musiqueerrata.jpg",
+    "/images/photos/canvas/oiseauxx.jpg",
+    "/images/photos/canvas/P1220058.jpg",
+    "/images/photos/canvas/P1220059bis.jpg",
+    "/images/photos/canvas/sept220016.jpg",
+    "/images/photos/canvas/serpent.jpg",
+    "/images/photos/canvas/synthé.jpg",
+    
+
+
+    
+  ];
+
+  const imgWidth = 200;
+  const imgHeight = 150;
+
+  const canvasWidth = window.innerWidth;
+  const canvasHeight = window.innerHeight;
+
+  let globalZShift = 0;
+
+  canvas.innerHTML = "";
+
+  const imgElements = [];
+
+  // 이미지 초기 생성
+  images.forEach(src => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.className = 'floating-img';
+    img.style.position = 'absolute';
+    img.style.width = `${imgWidth}px`;
+    img.style.height = 'auto';
+
+    const x = Math.random() * canvasWidth * 0.9;
+    const y = Math.random() * canvasHeight * 0.9;
+    const z = (Math.random() - 0.5) * 1000;
+
+    
+    img.dataset.x = x;
+    img.dataset.y = y;
+    img.dataset.z = z;
+
+    imgElements.push(img);
+    canvas.appendChild(img);
+  });
+
+  // 현재 줌 기준점 (초기값: 화면 중앙)
+  let zoomCenterX = canvasWidth / 2;
+  let zoomCenterY = canvasHeight / 2;
+
+  function updateImageTransform(img, shiftZ = 0) {
+    const x0 = parseFloat(img.dataset.x);
+    const y0 = parseFloat(img.dataset.y);
+    const z = parseFloat(img.dataset.z) + shiftZ;
+
+    const cameraZ = 1000;
+
+    // 원근 투영 비율
+    const perspective = cameraZ / (cameraZ - z);
+
+    // 마우스 기준점(zoomCenterX, zoomCenterY) 기준으로 위치 계산
+    const x = zoomCenterX + (x0 - zoomCenterX) * perspective;
+    const y = zoomCenterY + (y0 - zoomCenterY) * perspective;
+
+    const scale = perspective;
+
+    img.style.transform = `translate3d(${x}px, ${y}px, ${z}px) scale(${scale})`;
+  }
+
+  // 모든 이미지 위치 업데이트
+  function updateAllImages() {
+    imgElements.forEach(img => {
+      updateImageTransform(img, globalZShift);
+    });
+  }
+
+  updateAllImages();
+
+  // 드래그 스크롤 기능
+  let isDragging = false;
+  let startX, startY;
+  let scrollX = 0;
+  let scrollY = 0;
+
+  canvas.style.cursor = 'grab';
+
+  canvas.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    canvas.style.cursor = 'grabbing';
+    startX = e.clientX;
+    startY = e.clientY;
+    scrollX = window.scrollX;
+    scrollY = window.scrollY;
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    window.scrollTo(scrollX - dx, scrollY - dy);
+  });
+
+  window.addEventListener('mouseup', () => {
+    isDragging = false;
+    canvas.style.cursor = 'grab';
+  });
+
+  // 휠 이벤트로 줌 (커서 위치 기준)
+  window.addEventListener('wheel', (e) => {
+    e.preventDefault();
+
+    // 이번 줌에서 기준점을 마우스 커서 위치로 변경
+    zoomCenterX = e.clientX;
+    zoomCenterY = e.clientY;
+
+    globalZShift += e.deltaY * 0.5;
+
+    const minZShift = -700;
+    const maxZShift = 500;
+    globalZShift = Math.min(Math.max(globalZShift, minZShift), maxZShift);
+
+    updateAllImages();
+  }, { passive: false });
+
+  canvas.addEventListener('mouseleave', () => {
+  isDragging = false;
+  canvas.style.cursor = 'grab';
+});
+
+});
+</script>
+
+
+
+
+</body>
+</html>

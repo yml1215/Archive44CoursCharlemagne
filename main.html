@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive44courscharlemagne</title>
+  <link rel="stylesheet" href="/style/style_main.css">
+  <link rel="stylesheet" href="https://use.typekit.net/bmg6nfk.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo"><a href="/maintest2.html"><img src="/images/logo/adresse_black.png" alt="logo"></a></div>
+      <div class="text">
+        <div class="phrase01"><div class="francais">Bienvenue !</div><div class="coreen">어서오세요!</div></div>
+        <div class="phrase02"><div class="francais">C'est un monde parallèle,<br> celui d'un appartement<br>situé au 69002, France.</div><div class="coreen">이곳은 프랑스에 위치한<br>한 아파트의 평행세계입니다.</div></div>
+        <div class="phrase03"><div class="francais">Ici, vous trouverez<br>des trésors inattendus.</div><div class="coreen">여기서 당신은 예상치 못한<br>보물을 발견할 거에요.</div></div>
+      </div>
+      <div class="menu"><a href="/credit.html">?</a></div>
+    </div>
+    <div id="moving_buildings"><img src="/images/buildings2.png" alt="buildings">
+        <a href="/floorplan.html"><img id ="venez" src="/images/venez_w.svg"></a></div>
+    <div class="tree"><img src="/images/tree.png" alt="tree"></div>
+    <div class="tree" id="tree2"><img src="/images/tree.png" alt="tree"></div>
+    <div class="tree" id="tree3"><img src="/images/tree.png" alt="tree"></div>
+    <div id="etudiant"><img src="/images/etunoir.gif" alt="etudiant"></div>
+    
+    <div id="mouse"><img src="/images/scroll.gif" alt="mouse"></div>
+<div style="height: 300vh;"></div></div>
+
+<script>
+  //페이지 로드후 이미지 표시
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.style.opacity = 1;
+
+// mouse 3초 후 사라지게
+    setTimeout(() => {
+      const mouse = document.getElementById("mouse");
+      if (mouse) {
+        mouse.classList.add("hidden");
+      }
+    }, 3000);
+  });
+
+  //스크롤
+  let lastScrollTop = 0;
+  let ticking = false;
+  let hasScrolledOnce = false;
+
+  const movingBuildings = document.getElementById("moving_buildings");
+  const trees = document.querySelectorAll(".tree");
+  const phrases = document.querySelectorAll(".phrase01, .phrase02, .phrase03, .phrase04");
+  const logo = document.querySelector(".logo");
+  const venez = document.getElementById("venez");
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const scrollDiff = currentScroll - lastScrollTop;
+
+        if (!hasScrolledOnce && Math.abs(scrollDiff) > 5) {
+          hasScrolledOnce = true;
+        }
+
+        if (hasScrolledOnce && Math.abs(scrollDiff) > 5) {
+          if (scrollDiff > 0) {
+            // 👇 아래로 스크롤
+            movingBuildings.classList.add("scrolled-down");
+            movingBuildings.classList.remove("scrolled-up");
+
+            trees.forEach(tree => {
+              tree.classList.add("scrolled-up");
+              tree.classList.remove("scrolled-down");
+            });
+
+            venez.classList.add("scrolled-up");
+            venez.classList.remove("scrolled-down");
+
+            phrases.forEach(p => {
+              p.classList.remove("phrase-animate-out");
+              p.classList.add("phrase-animate-in");
+            });
+
+            logo.classList.remove("phrase-animate-out");
+            logo.classList.add("phrase-animate-in");
+
+          } else {
+            // 👆 위로 스크롤
+            movingBuildings.classList.add("scrolled-up");
+            movingBuildings.classList.remove("scrolled-down");
+
+            trees.forEach(tree => {
+              tree.classList.add("scrolled-down");
+              tree.classList.remove("scrolled-up");
+            });
+
+            venez.classList.add("scrolled-down");
+            venez.classList.remove("scrolled-up");
+
+            phrases.forEach(p => {
+              p.classList.remove("phrase-animate-in");
+              p.classList.add("phrase-animate-out");
+            });
+
+            logo.classList.remove("phrase-animate-in");
+            logo.classList.add("phrase-animate-out");
+          }
+        }
+
+        // 항상 마지막 스크롤 위치 저장
+        lastScrollTop = Math.max(currentScroll, 0);
+        ticking = false;
+      });
+
+      ticking = true;
+    }
+  });
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,294 @@
+:root {
+  --beige: #F7F7EB;
+  --blue: #0071DD;
+  --khaki: #B6B191;
+  --rose: #F4A79F;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+  @font-face {
+    font-family: "Antikor Mono Light Italic";
+    src: url("/fonts/Antikor_Mono_Light_Italic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+  }
+@font-face {
+  font-family: "Antikor Mono Light";
+  src: url("/fonts/Antikor_Mono_Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+  @font-face {
+    font-family: "Antikor Mono Bold Italic";
+    src: url("/fonts/Antikor_Mono_Bold_Italic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+  }
+  @font-face {
+  font-family: "Antikor Mono Regular";
+  src: url("/fonts/Antikor_Mono_Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+  @font-face {
+    font-family: "Antikor Mono Bold";
+    src: url("/fonts/Antikor_Mono_Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+@font-face {
+  font-family: "Spoqa Light";
+  src: url("/fonts/SpoqaHanSansNeo-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Spoqa Regular";
+  src: url("/fonts/SpoqaHanSansNeo-Regular.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Spoqa Bold";
+  src: url("/fonts/SpoqaHanSansNeo-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+@keyframes blinkV {
+  0%, 100% {
+    transform: translateY(-1vw);
+  }
+  50% {
+    transform: translateY(0vw);
+  }
+}
+@keyframes blinkH {
+  0%, 100% {
+    transform: translateX(-1vw);
+  }
+  50% {
+    transform: translateX(0vw);
+  }
+}
+
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: var(--blue);
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100vw;  
+  height: 100vh; 
+
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+/* --------------------------------------------------------------------------------------------------------- */
+.header {
+  position: fixed;
+  top:0;
+  width: 100vw;
+  height: 7vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+
+  background-image: url('/images/header_background.png');
+  background-size: 100% 100%;   /* fill처럼 왜곡을 감수하고 꽉 채움 */
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+.logo {
+  width: auto;
+  height: 30px;
+  padding: 0;
+  display: flex;
+}
+.logo img{
+  height: 100%;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+.container {
+  display: flex;
+  position: relative;
+  width: 98vw;
+  height: 93vh;
+  top: 7vh;
+  overflow: hidden;
+}
+  #photo_atelier {
+    position: fixed;
+    top: 7vh;
+    left: 0;
+    height: 93vh;
+    width: 100vw;
+    transition: transform 0.3s ease-out;
+  }
+#photo_atelier img {
+  height: 100%;
+}
+/* --------------------------------------------------------------------------------------------------------- */
+.button {
+  transition: transform 0.5s ease-out;
+}
+.button{
+  cursor: pointer;
+}
+
+.bubble{
+  position: absolute;
+  background-color: var(--beige);
+  border: 1px solid var(--blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+
+  font-family: 'Antikor Mono Regular', sans-serif;
+  width: 17vw;
+  top: 10vh;
+  right: -20vw;
+}
+.bubble img{
+  width: 100%;
+}
+
+/* .description-kr{
+  font-family: 'Spoqa_Regular', sans-serif;
+}  */
+p{
+  align-items: center;
+}
+
+
+.reflex{
+  width: 5vw;
+  top: 10vh;
+  left: 60vw;
+}
+.radio{
+  width: 20vw;
+  bottom: 13vh;
+  right: -30vw;
+}
+.tv{
+  width: 20vw;
+  bottom: 8vh;
+  right: -70vw;
+}
+
+.box_reflex, .box_radio, .box_tv {
+  position: absolute;
+  background-color: var(--beige);
+  color: var(--blue);
+  font-family: 'Antikor Mono Regular', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  border: 1px solid var(--blue);
+  border-radius: 15px;
+
+  padding: 1rem;
+  z-index: 999;
+}
+.box_reflex.show,
+.box_radio.show,
+.box_tv.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.box_reflex{
+  transform: translate(-110%, -210%);
+  width: 15vw;
+}
+.box_radio{
+  transform: translate(0%, -170%);
+}
+.box_tv{
+  transform: translate(10%, -470%);
+}
+.icon{
+  width: 2.5rem;
+  height: 2.5rem;
+  animation: blinkV 1.5s infinite;
+  position: absolute;
+  left: 1.4vw;
+  top: -2vw;
+}
+.arrow{
+  width: 1rem;
+  height: 1rem;
+  margin-right: 1rem;
+}
+
+.button >img{
+  width: 100%;
+}
+.button{
+  position:absolute;
+  /* animation: float 1s ease-in-out infinite; */
+}
+
+.note {
+  position: fixed;
+  bottom: 0;
+  width: 24px;
+  height: auto;
+  animation: fall linear forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+.entry-cuisine{
+  position: absolute;
+  left: 3vw;
+  bottom: 20vh;
+  font-size: 2rem;
+  font-family: 'Antikor Mono Bold', sans-serif;
+  z-index: 99;
+}
+.entry-cuisine svg{
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  z-index: 99;
+  animation: blinkH 1.5s infinite;
+}

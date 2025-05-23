@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive44courscharlemagne</title>
+  <link rel="stylesheet" href="/style/style_cuisine.css">
+  <link rel="stylesheet" href="https://use.typekit.net/bmg6nfk.css">
+</head>
+
+<body>
+ <div class="header">
+    <div class="logo">
+      <a href="/main.html"><img src="/images/logo/adresse_1.png" alt="logo" /></a></div>
+    </div>
+
+  <div class="container">
+    <div id="photo_cuisine"><img src="/images/photos/cuisine_3d.png" alt="cuisine" />
+      <div class="poster"><img src="/images/lage_de_cristal.jpg" alt="poster"></div>
+      <a class="entry-chambre notice" href="/chambre.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+      <path d="M38 24H10M10 24L24 38M10 24L24 10" stroke="#FF0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><br>chambre</a>
+      <a class="entry-atelier notice" href="/atelier.html">
+        atelier<br>
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+      <path d="M10 24H38M38 24L24 38M38 24L24 10" stroke="#FF0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="entry-couloir notice" href="/floorplan.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <path d="M18 28L8 18M8 18L18 8M8 18H32C34.1217 18 36.1566 18.8429 37.6569 20.3431C39.1571 21.8434 40 23.8783 40 26V40" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><br>couloir</a>
+
+      <div class="table">
+        <img class="tableImg" src="/images/photos/cuisine_table.png" alt="table">
+      </div>
+      <div class=" livredor">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 16V32M16 24H32M44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24Z" stroke="#FF0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <img src="/images/mug.png" alt="mug">
+      </div>
+        <div class="box_livredor">
+          <div class="livredor-content">
+            <div class="entries" id="entries">
+              <!-- 이전 방명록 메시지들이 여기에 출력됨 -->
+            </div>
+            <div class="input-row">
+              <textarea id="guestInput" placeholder="Laissez votre pensée ici"></textarea>
+              <button id="saveEntry">ENREGISTRE</button>
+
+            </div>
+          </div>
+        </div>
+
+
+</div></div>
+<div style="height: 200vw;"></div>
+
+<script type="module">
+  // Firebase 모듈 임포트
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore.js";
+
+  // Firebase 앱 설정
+  const firebaseConfig = {
+    apiKey: "AIzaSyCXiuJmzuBrJhnEoxu3kr1IUwljs2azXjY",
+    authDomain: "archive-44courscharlemagne.firebaseapp.com",
+    projectId: "archive-44courscharlemagne",
+    storageBucket: "archive-44courscharlemagne.firebasestorage.app",
+    messagingSenderId: "339711949129",
+    appId: "1:339711949129:web:a8c219fef3a4d3e4904298"
+  };
+
+  // Firebase 초기화
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // body 불투명도 1로 변경 (초기 숨김 해제)
+    document.body.style.opacity = 1;
+
+    // livredor 버튼과 방명록 박스 선택
+    const trigger = document.querySelector(".livredor");
+    const box = document.querySelector(".box_livredor");
+
+    if (trigger && box) {
+      // 버튼 클릭 시 토글
+      trigger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        box.classList.toggle("show");
+      });
+
+      // 박스 내부 클릭 시 닫힘 방지
+      box.addEventListener("click", (e) => {
+        e.stopPropagation();
+      });
+
+      // 바깥 클릭 시 박스 닫기
+      document.addEventListener("click", () => {
+        if (box.classList.contains("show")) {
+          box.classList.remove("show");
+        }
+      });
+    }
+
+    // 스크롤 시 #photo_cuisine 및 내부 버튼 가로 이동 애니메이션
+    const photoCuisine = document.getElementById("photo_cuisine");
+    if (photoCuisine) {
+      const buttons = photoCuisine.querySelectorAll(".livredor, .table, .notice");
+      const vw = window.innerWidth / 100;
+      const maxScroll = 900;
+      const maxTranslateVW = -89;
+      let ticking = false;
+      let lastScrollY = 0;
+
+      window.addEventListener("scroll", () => {
+        lastScrollY = window.scrollY || window.pageYOffset;
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const ratio = Math.min(lastScrollY / maxScroll, 1);
+            const translateMain = maxTranslateVW * vw * ratio;
+            photoCuisine.style.transform = `translateX(${translateMain}px)`;
+            buttons.forEach((el, i) => {
+              const delayRatio = 0.98 - i * 0.01;
+              const translateChild = maxTranslateVW * vw * ratio * delayRatio;
+              el.style.transform = `translateX(${translateChild}px)`;
+            });
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    }
+
+    // Firestore 방명록 관련 요소
+    const entriesContainer = document.getElementById("entries");
+    const saveButton = document.getElementById("saveEntry");
+    const guestInput = document.getElementById("guestInput");
+
+    // Firestore에 새 방명록 저장 함수
+    async function addEntry(text) {
+      try {
+        await addDoc(collection(db, "guestbook"), {
+          message: text,
+          timestamp: new Date()
+        });
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
+    }
+
+    // Firestore에서 방명록 불러오기 및 출력 함수
+    async function loadEntries() {
+      entriesContainer.innerHTML = "";
+      const q = query(collection(db, "guestbook"), orderBy("timestamp", "asc"));
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        const data = doc.data();
+
+        // timestamp 안전하게 처리
+        let date;
+        if (data.timestamp?.toDate) {
+          date = data.timestamp.toDate();
+        } else if (data.timestamp?.seconds) {
+          date = new Date(data.timestamp.seconds * 1000);
+        } else {
+          date = new Date();
+        }
+
+        const dateString = date.toLocaleDateString("fr-FR");
+        const timeString = date.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" });
+
+        const entry = document.createElement("div");
+        entry.innerHTML = `<p>${data.message}</p><small>${dateString} ${timeString}</small>`;
+        entriesContainer.appendChild(entry);
+      });
+      entriesContainer.scrollTop = entriesContainer.scrollHeight;
+    }
+
+    // 초기 방명록 데이터 로드
+    loadEntries();
+
+    // 저장 버튼 클릭 시 처리
+    saveButton.addEventListener("click", async () => {
+      const text = guestInput.value.trim();
+      if (text !== "") {
+        await addEntry(text);
+        guestInput.value = "";
+        await loadEntries();
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

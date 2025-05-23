@@ -1,0 +1,265 @@
+/* ------------------------------------ */
+/* 🌈 1. 기본 설정 및 변수             */
+/* ------------------------------------ */
+:root {
+  --beige: #F7F7EB;
+  --blue: #0071DD;
+  --khaki: #B6B191;
+  --rose: #F4A79F;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: black;
+  background-color: #DDEFE2;
+  overflow-y: auto;
+  width: 100dvw;
+  height: 100dvh;
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ------------------------------------ */
+/* ✍️ 2. 폰트 설정                      */
+/* ------------------------------------ */
+@font-face {
+  font-family: "Antikor_Light_Italic";
+  src: url("/fonts/Antikor_Mono\ Light_Italic.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Antikor_Light";
+  src: url("/fonts/Antikor_Mono_Light.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Antikor_Regular";
+  src: url("/fonts/Antikor_Mono_Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Antikor_Bold";
+  src: url("/fonts/Antikor_Mono_Bold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Spoqa_Light";
+  src: url("/fonts/SpoqaHanSansNeo-Light.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Spoqa_Regular";
+  src: url("/fonts/SpoqaHanSansNeo-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Spoqa_Bold";
+  src: url("/fonts/SpoqaHanSansNeo-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* ------------------------------------ */
+/* 🌀 3. 애니메이션                     */
+/* ------------------------------------ */
+@keyframes slideDownFade {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideFromTop {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideToTop {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-30px); }
+}
+
+/* ------------------------------------ */
+/* 🔝 4. 헤더 및 메뉴                   */
+/* ------------------------------------ */
+.header {
+  position: fixed;
+  width: 100%;
+  height: 15vh;
+  padding: 20px;
+  display: flex;
+}
+
+.logo {
+  height: 30px;
+  width: auto;
+  display: flex;
+}
+.logo img {
+  height: 100%;
+  width: auto;
+}
+
+.text {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.logo, .phrase01, .phrase02, .phrase03 {
+  width: 15vw;
+  margin-right: 7vw;
+  opacity: 0;
+}
+
+.phrase-animate-in {
+  animation: slideFromTop 0.8s ease-out forwards;
+}
+.phrase-animate-out {
+  animation: slideToTop 0.8s ease-in forwards;
+}
+
+.francais {
+  font-family: "Antikor_Light_Italic";
+  font-size: 0.9vw;
+  text-transform: uppercase;
+}
+
+.coreen {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+  font-size: 0.8vw;
+  display: none;
+}
+
+.menu {
+  display: flex;
+  width: 20px;
+  height: 100%;
+  justify-content: flex-end;
+  font-family: "Antikor Regular", sans-serif;
+  font-size: 1.2rem;
+}
+
+/* ------------------------------------ */
+/* 🧱 5. 콘텐츠 구조 및 고정 요소들     */
+/* ------------------------------------ */
+.container {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+/* VENZ 이미지 */
+#venez {
+  position: fixed;
+  z-index: 10;
+  left: 10vw;
+  top: -20vh;
+  width: 75vw;
+  opacity: 0.8;
+  transition: transform 3.1s ease-in-out;
+}
+#venez img {
+  width: 100%;
+  height: auto;
+}
+#venez.scrolled-down {
+  transform: translateX(10vw);
+}
+#venez.scrolled-up {
+  transform: translateX(-30vw);
+}
+
+/* 움직이는 건물 */
+#moving_buildings {
+  position: fixed;
+  top: 10vw;
+  right: 1vw;
+  height: 100%;
+  transform: translateX(20vw);
+  transition: transform 3s ease-in-out;
+}
+#moving_buildings.scrolled-down {
+  transform: translateX(20vw);
+}
+#moving_buildings.scrolled-up {
+  transform: translateX(90vw);
+}
+#moving_buildings img {
+  height: 80%;
+}
+
+/* 학생 이미지 */
+#etudiant {
+  width: 6vw;
+  position: fixed;
+  bottom: 2vh;
+  left: 45vw;
+}
+#etudiant img {
+  width: 100%;
+}
+
+/* 화살표 */
+#mouse {
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  z-index: 1000;
+  transition: opacity 1s ease;
+}
+#mouse img {
+  width: 3vw;
+}
+#mouse.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 나무들 */
+.tree {
+  position: fixed;
+  width: 9vw;
+  bottom: 0;
+  left: 10vw;
+  z-index: 1000;
+  transform: translateX(0);
+  transition: transform 3.1s ease-in-out;
+}
+.tree img {
+  width: 100%;
+}
+#tree2 { left: 80vw; }
+#tree3 { left: -60vw; }
+.tree.scrolled-down {
+  transform: translateX(70vw);
+}
+.tree.scrolled-up {
+  transform: translateX(0);
+}
+
+/* 인트로 */
+#intro {
+  width: 30vw;
+  position: fixed;
+  left: 25vw;
+  top: 2vh;
+  z-index: 1001;
+}
+#intro img {
+  width: 100%;
+  mix-blend-mode: multiply;
+}

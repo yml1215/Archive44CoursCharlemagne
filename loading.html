@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>archive44courscharlemagne</title>
+  <style>
+    :root {
+  --beige: #F7F7EB;
+  --blue: #0071DD;
+  --khaki: #B6B191;
+  --rose: #F4A79F;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: black;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: var(--beige);
+  width: 100vw;
+  height: 100vh;
+
+  transition: opacity 1s ease; 
+}
+body.fade-out {
+      opacity: 0;
+    }
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#archive{
+  width: 8vw;
+}
+#gif{
+  width: 10vw;
+  margin-left: 1rem;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- <img id="archive" src="/images/logo/archive_1.png"> -->
+    <img id="gif" src="/images/logo/composition_logo.gif">
+  </div>
+
+<script>
+    // 3초 후에 fade-out 시작
+    setTimeout(() => {
+      document.body.classList.add('fade-out');
+
+      // fade 효과 끝난 후 페이지 이동 (1초 뒤)
+      setTimeout(() => {
+        window.location.href = "floorplan2.html"; // 이동할 HTML 파일 이름
+      }, 1000); // CSS transition 시간과 일치
+    }, 5000);
+  </script>
+</body>
+</html>

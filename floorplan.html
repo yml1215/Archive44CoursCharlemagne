@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>archive44courscharlemagne</title>
+    <link rel="stylesheet" href="/style/style_floorplan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <img id="cursor-gif" src="/images/cursor/cursor.gif" alt="cursor gif">
+    <div class="background"><img  src="/images/building_background_2.png" alt="건물 배경 이미지"></div>
+    <header class="header">
+        <div class="logo"><a href="/main.html"><img src="/images/logo/adresse_1.png" alt="logo"></a></div>
+    </header>
+        <div class="container">
+            <div class="container01">
+                <div id="floorplan"><img src="/images/floorplan.png" alt="floor plan"></div>
+                <div class="boxes">
+                    <div class="box1">
+                        <div class="line line01">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="201" height="80" viewBox="0 0 201 80" fill="none">
+                            <path d="M0.5 0.5L0.5 75H195.5" stroke="#0071DD"/>
+                            <circle cx="196" cy="75" r="5" fill="#0071DD"/>
+                            </svg>
+                        </div>
+                        <a href="/cuisine.html"><img class="tone" src="/images/tone2.png" alt="tone"></a>
+                        <div class="description-box1">
+                            <div class="description-fr">
+                                <p>Cuisine</p>
+                                <p>Prendre un café, manger, et discuter.</p>
+                                <p class="light">Échangez ensemble</p>
+                            </div>
+                            <!-- <div class="description-kr">
+                                <p>부엌</p>
+                                <p>커피를 마시고, 식사를 하고, 대화를 나누고</p>
+                                <p class="light">비법 레시피를 발견하세요<br>함께 대화를 나누세요</p>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <div class="line line02">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="202" height="80" viewBox="0 0 202 80" fill="none">
+                            <path d="M201 0.5L201 75H6" stroke="#0071DD"/>
+                            <circle cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 10.5 70)" fill="#0071DD"/>
+                            </svg>
+                        </div>
+                        <a href="/atelier.html"><img class="tone" src="/images/tone2.png" alt="tone"></a>
+                        <div class="description-box2">
+                            <div class="description-fr">
+                                <p>Atelier</p>
+                                <p>Un atelier qui ne cesse jamais</p>
+                                <p class="light">Suivez le lien pour passer dans une autre dimension.</p>
+                            </div><br>
+                            <!-- <div class="description-kr">
+                                <p>아뜰리에</p>
+                                <p>연중무휴의 작업실</p>
+                                <p class="light">링크를 통해 다른 차원으로 이동하세요<br>음악, 영상, 그리고 팬진 출판을 만나보세요</p>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="box3">
+                    </div>
+                    <div class="box4">
+                        <div class="line line03">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="202" height="80" viewBox="0 0 202 80" fill="none">
+                            <path d="M201 0.5L201 75H6" stroke="#0071DD"/>
+                            <circle cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 10.5 70)" fill="#0071DD"/>
+                            </svg>
+                        </div>
+                        <a href="/chambre.html"><img class="tone" src="/images/tone2.png" alt="tone"></a>
+                        <div class="description-box4">
+                            <div class="description-fr">
+                                <p>Chambre</p>
+                                <p>Un monde rempli des<br>images oubliés</p>
+                                <p class="light">Découvrez des collections</p>
+                            </div><br>
+                            <div class="description-kr">
+                                <!-- <p>방</p>
+                                <p>잊혀진 보물들로 가득한 공간</p>
+                                <p class="light">방대한 컬렉션을 감상하세요</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="band"><div class="scrolling-text">
+                    <span class="fr">Choisissez un endroit ou vous voulez explorer. Cliquez pour y entrer.</span>
+                    <!-- <span class="kr">탐색하고 싶은 장소를 선택하세요. 클릭하여 들어가보세요.</span> -->
+                </div></div>
+            </div>
+        </div>
+
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      // 페이지 로드 후 fade-in 시작
+      document.body.style.opacity = 1;
+    });
+
+        const cursorGif = document.getElementById('cursor-gif');
+    
+        document.addEventListener('mousemove', function(e) {
+            cursorGif.style.left = (e.clientX - 25) + 'px';
+            cursorGif.style.top = (e.clientY - 25) + 'px';
+        });
+    </script>
+    
+</body>
+</html>
