@@ -117,7 +117,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .francais {
-  font-family: "Antikor Light Italic";
+  font-family: "Antikor Light Italic", sans-serif;
   font-size: 0.9vw;
   text-transform: uppercase;
 }
@@ -134,7 +134,7 @@ a, a:visited, a:hover, a:active {
   width: 20px;
   height: 100%;
   justify-content: flex-end;
-  font-family: "Antikor Regular", sans-serif;
+  font-family: "Antikor Bold", sans-serif;
   font-size: 1.2rem;
 }
 
