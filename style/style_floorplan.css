@@ -230,7 +230,7 @@ body {
   font-size: 0.9rem;
 } */
 .description-fr{
-  font-family: "Antikor Mono Regular", sans-serif;
+  font-family: "Antikor Regular", sans-serif;
   font-size: 0.9rem;
   text-transform: uppercase;
   padding: 1.5rem;
@@ -239,7 +239,7 @@ body {
 }
 .description-fr > p:first-child{
   font-size: 1.1rem;
-  font-family: 'Antikor Mono Bold', 'sans-serif';
+  font-family: 'Antikor Bold', 'sans-serif';
 }
 /* .description-kr > p:first-child {
   color: var(--khaki);
@@ -264,7 +264,7 @@ body {
   animation: scrollLoop 15s linear infinite;
 }
 .scrolling-text .fr {
-  font-family: "Antikor Mono Light Italic", sans-serif;
+  font-family: "Antikor Light Italic", sans-serif;
   color: var(--blue);
   font-size: 0.9rem;
   margin-right: 1rem;
@@ -283,20 +283,4 @@ body {
   100% {
     transform: translateX(-100vh);
   }
-}
-/* --------------------------------------------------------------------------------------------------------- */
-.footer{
-  display: flex;
-  width: 100%;
-  min-height: 10vh;
-
-  padding: 20px;
-  margin-top: 20px;
-  font-family: "Antikor Mono Light";
-  font-size: 0.8vw;
-  color: var(--blue);
-}
-.footer div{
-  width: 20rem;
-  height: 1rem;
 }
