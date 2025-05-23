@@ -39,7 +39,7 @@ a, a:visited, a:hover, a:active {
 /* ------------------------------------ */
 @font-face {
   font-family: "Antikor_Light_Italic";
-  src: url("/fonts/Antikor_Mono/Light_Italic.ttf") format("truetype");
+  src: url("/fonts/Antikor_Mono_Light_Italic.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
