@@ -49,7 +49,7 @@ body, html {
   flex-direction: column;
   height: 100%;
   width: 100dvw;
-  font-family: 'Antikor Mono Regular';
+  font-family: 'Antikor Regular';
 }
 /* --------------------------------------------------------------------------------------------------------- */
 .header {
@@ -76,7 +76,7 @@ body, html {
   width: 5%;
   height: 100%;
   justify-content: flex-end;
-  font-family: "Antikor Mono Bold";
+  font-family: "Antikor Bold";
   font-size: 1.2rem;
 }
 /* --------------------------------------------------------------------------------------------------------- */
@@ -151,19 +151,4 @@ body, html {
 }
 .subtitle{
     font-size: 1.5rem;
-}
-/* --------------------------------------------------------------------------------------------------------- */
-.footer{
-  display: flex;
-  width: 100vw;
-  height: 5rem;
-  margin-top: 1rem;
-  font-family: "Antikor Mono Light", sans-serif;
-  font-weight: 300;
-  font-size: 0.8rem;
-  padding: 1rem;
-}
-.footer div{
-  width: 20rem;
-  height: 1rem;
 }
