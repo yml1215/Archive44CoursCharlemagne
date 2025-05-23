@@ -39,22 +39,22 @@ a, a:visited, a:hover, a:active {
 /* ------------------------------------ */
 @font-face {
   font-family: "Antikor_Light_Italic";
-  src: url("./fonts/Antikor_Mono_Light_Italic.ttf") format("truetype");
+  src: url("./fonts/AntikorMonoLightItalic.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
   font-family: "Antikor_Light";
-  src: url("./fonts/Antikor_Mono_Light.ttf") format("truetype");
+  src: url("./fonts/AntikorMonoLight.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
   font-family: "Antikor_Regular";
-  src: url("./fonts/Antikor_Mono_Regular.ttf") format("truetype");
+  src: url("./fonts/AntikorMonoRegular.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
   font-family: "Antikor_Bold";
-  src: url("./fonts/Antikor_Mono_Bold.ttf") format("truetype");
+  src: url("./fonts/AntikorMonoBold.ttf") format("truetype");
   font-display: swap;
 }
 
