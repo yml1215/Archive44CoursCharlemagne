@@ -84,6 +84,7 @@ body, html {
   display: flex;
   width: 100vw;
   height: 93vh;
+  font-family: "Antikor Regular", sans-serif;
 }
 .boxes {
   padding: 20px;
@@ -100,7 +101,6 @@ body, html {
   flex-direction: column;
   align-items: flex-start;   /* 수직: 위쪽 정렬 */
   justify-content: flex-start;
-  font-family: "Antikor Regular", sans-serif;
 }
 .box1{
   grid-column: 1 / 3;
