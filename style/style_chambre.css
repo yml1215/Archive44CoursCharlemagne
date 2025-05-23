@@ -70,14 +70,14 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
 
-  background-image: url('../images/header_background_2.png');
+  background-image: url('../images/header_background2.png');
   background-size: 100% 100%;   /* fill처럼 왜곡을 감수하고 꽉 채움 */
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
 }
 .logo {
-  width: auto;
+  width: 95vw;
   height: 30px;
   padding: 0;
   display: flex;
