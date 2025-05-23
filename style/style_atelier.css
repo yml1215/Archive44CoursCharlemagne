@@ -140,7 +140,7 @@ body::-webkit-scrollbar {
   align-items: center;
   padding: 0.5rem;
 
-  font-family: 'Antikor Mono Regular', sans-serif;
+  font-family: 'Antikor Regular', sans-serif;
   width: 17vw;
   top: 10vh;
   right: -20vw;
@@ -177,7 +177,7 @@ p{
   position: absolute;
   background-color: var(--beige);
   color: var(--blue);
-  font-family: 'Antikor Mono Regular', sans-serif;
+  font-family: 'Antikor Regular', sans-serif;
   text-transform: uppercase;
   font-size: 0.9rem;
 
@@ -250,7 +250,7 @@ p{
   left: 3vw;
   bottom: 20vh;
   font-size: 2rem;
-  font-family: 'Antikor Mono Bold', sans-serif;
+  font-family: 'Antikor Bold', sans-serif;
   z-index: 99;
 }
 .entry-cuisine svg{
