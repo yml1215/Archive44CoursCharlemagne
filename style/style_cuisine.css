@@ -154,8 +154,8 @@ body::-webkit-scrollbar {
   z-index: 99;
 }
 .entry-chambre svg{
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   flex-shrink: 0;
   z-index: 99;
   animation: blinkH 1.5s infinite;
@@ -170,8 +170,8 @@ body::-webkit-scrollbar {
   z-index: 99;
 }
 .entry-atelier svg{
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   flex-shrink: 0;
   z-index: 99;
   animation: blinkH 1.5s infinite;
@@ -186,8 +186,8 @@ body::-webkit-scrollbar {
   color: black;
 }
 .entry-couloir svg{
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   flex-shrink: 0;
   z-index: 99;
   animation: blinkH 1.5s infinite;
