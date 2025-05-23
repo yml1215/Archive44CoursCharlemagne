@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>archive44courscharlemagne</title>
-  <link rel="stylesheet" href="/style/style_chambre.css">
+  <link rel="stylesheet" href="./style/style_chambre.css">
 </head>
 <body>
    <div class="header">
     <div class="logo">
-      <a href="/index.html"><img src="/images/logo/adresse_1.png" alt="logo" /></a></div>
+      <a href="./index.html"><img src="./images/logo/adresse_1.png" alt="logo" /></a></div>
     <div class="menu">
       <a href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
   <path d="M6 24H42M6 12H42M6 36H42" stroke="#0071DD" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></a>
       <div class="menu-box">
-        <p><a href="/floorplan.html">couloir</a></p>
-        <p><a href="/cuisine.html">cuisine</a></p>
-        <p><a href="/atelier.html">atelier</a></div></p>
+        <p><a href="./floorplan.html">couloir</a></p>
+        <p><a href="./cuisine.html">cuisine</a></p>
+        <p><a href="./atelier.html">atelier</a></div></p>
       </div>
   </div>
 <div id="canvas"></div>
@@ -44,70 +44,69 @@ menu.addEventListener('click', e => e.stopPropagation());
 
   const canvas = document.getElementById('canvas');
   const images = [
-    "/images/photos/canvas/chiot-mimi.jpg",
-    "/images/photos/canvas/20171230_105408.jpg",
-    "/images/photos/canvas/60's-nousdeux2.jpg",
-    "/images/photos/canvas/bouteille fraise.jpg",
-    "/images/photos/canvas/donovan-plaisir double.jpg",
-    "/images/photos/canvas/elcoco2.jpg",
-    "/images/photos/canvas/douche.jpg",
-    "/images/photos/canvas/20210714_105014.jpg",
-    "/images/photos/canvas/perrache.jpg",
-    "/images/photos/canvas/truelle lauriers.jpg",
-    "/images/photos/canvas/spirale boule.jpg",
-    "/images/photos/canvas/STAMP-D.jpg",
-    "/images/photos/canvas/STAMP-F-balladur.jpg",
-    "/images/photos/canvas/vol de canards.jpg",
-    "/images/photos/canvas/IMG20230203191533.jpg",
-    "/images/photos/canvas/louisarmstrong.jpg",
-    "/images/photos/canvas/IMG_3929.jpg",
-    "/images/photos/canvas/IMG_3930.jpg",
-    "/images/photos/canvas/IMG_3928.jpg",
-    "/images/photos/canvas/IMG20221202115110.jpg",
-    "/images/photos/canvas/IMG_3927.jpg",
-    "/images/photos/canvas/000027-2.jpg",
-    "/images/photos/canvas/000028.jpg",
-    "/images/photos/canvas/000029.jpg",
-    "/images/photos/canvas/errata-logo-noir.png",
-    "/images/photos/canvas/fantome.jpg",
-    "/images/photos/canvas/plaisirs de la table.jpg",
-    "/images/photos/canvas/IMG_3927.jpg",
-    "/images/photos/canvas/cinema.jpg",
-    "/images/photos/canvas/allo-cosmos.jpg",
-
-    "/images/photos/canvas/2024-03-05-0001.jpg",
-    "/images/photos/canvas/apocalypse1.jpg",
-    "/images/photos/canvas/autoportrait-ligne claire.jpg",
-    "/images/photos/canvas/beta.jpg",
-    "/images/photos/canvas/brouillard.jpg",
-    "/images/photos/canvas/cafetiere.jpg",
-    "/images/photos/canvas/cassettes.jpg",
-    "/images/photos/canvas/compartiment-refrigéré.jpg",
-    "/images/photos/canvas/des-ptits-traits.jpeg",
-    "/images/photos/canvas/echecs.jpg",
-    "/images/photos/canvas/electron.jpg",
-    "/images/photos/canvas/electron2.jpg",
-    "/images/photos/canvas/electron3.jpg",
-    "/images/photos/canvas/errata-dessin.jpg",
-    "/images/photos/canvas/erratatv.jpg",
-    "/images/photos/canvas/etudiant-en-art-insta1.jpg",
-    "/images/photos/canvas/etudiant-en-art1.jpg",
-    "/images/photos/canvas/etudiantenart INSTA14-9.jpg",
-    "/images/photos/canvas/FauxFomoMaux-MelchiorMercure-gris-1.jpg",
-    "/images/photos/canvas/grimace-gloubi-1.jpg",
-    "/images/photos/canvas/IMG20220602115421.jpg",
-    "/images/photos/canvas/IMG20221114100103.jpg",
-    "/images/photos/canvas/king_felix-vortex-bal_tazar.jpg",
-    "/images/photos/canvas/leprincipedexplosion-tramé.jpg",
-    "/images/photos/canvas/melchior0024.jpg",
-    "/images/photos/canvas/Mmercure-nouvellesfraiches-1-trame.jpg",
-    "/images/photos/canvas/musiqueerrata.jpg",
-    "/images/photos/canvas/oiseauxx.jpg",
-    "/images/photos/canvas/P1220058.jpg",
-    "/images/photos/canvas/P1220059bis.jpg",
-    "/images/photos/canvas/sept220016.jpg",
-    "/images/photos/canvas/serpent.jpg",
-    "/images/photos/canvas/synthé.jpg",
+    "./images/photos/canvas/chiot-mimi.jpg",
+    "./images/photos/canvas/20171230_105408.jpg",
+    "./images/photos/canvas/60's-nousdeux2.jpg",
+    "./images/photos/canvas/bouteille fraise.jpg",
+    "./images/photos/canvas/donovan-plaisir double.jpg",
+    "./images/photos/canvas/elcoco2.jpg",
+    "./images/photos/canvas/douche.jpg",
+    "./images/photos/canvas/20210714_105014.jpg",
+    "./images/photos/canvas/perrache.jpg",
+    "./images/photos/canvas/truelle lauriers.jpg",
+    "./images/photos/canvas/spirale boule.jpg",
+    "./images/photos/canvas/STAMP-D.jpg",
+    "./images/photos/canvas/STAMP-F-balladur.jpg",
+    "./images/photos/canvas/vol de canards.jpg",
+    "./images/photos/canvas/IMG20230203191533.jpg",
+    "./images/photos/canvas/louisarmstrong.jpg",
+    "./images/photos/canvas/IMG_3929.jpg",
+    "./images/photos/canvas/IMG_3930.jpg",
+    "./images/photos/canvas/IMG_3928.jpg",
+    "./images/photos/canvas/IMG20221202115110.jpg",
+    "./images/photos/canvas/IMG_3927.jpg",
+    "./images/photos/canvas/000027-2.jpg",
+    "./images/photos/canvas/000028.jpg",
+    "./images/photos/canvas/000029.jpg",
+    "./images/photos/canvas/errata-logo-noir.png",
+    "./images/photos/canvas/fantome.jpg",
+    "./images/photos/canvas/plaisirs de la table.jpg",
+    "./images/photos/canvas/IMG_3927.jpg",
+    "./images/photos/canvas/cinema.jpg",
+    "./images/photos/canvas/allo-cosmos.jpg",
+    "./images/photos/canvas/2024-03-05-0001.jpg",
+    "./images/photos/canvas/apocalypse1.jpg",
+    "./images/photos/canvas/autoportrait-ligne claire.jpg",
+    "./images/photos/canvas/beta.jpg",
+    "./images/photos/canvas/brouillard.jpg",
+    "./images/photos/canvas/cafetiere.jpg",
+    "./images/photos/canvas/cassettes.jpg",
+    "./images/photos/canvas/compartiment-refrigéré.jpg",
+    "./images/photos/canvas/des-ptits-traits.jpeg",
+    "./images/photos/canvas/echecs.jpg",
+    "./images/photos/canvas/electron.jpg",
+    "./images/photos/canvas/electron2.jpg",
+    "./images/photos/canvas/electron3.jpg",
+    "./images/photos/canvas/errata-dessin.jpg",
+    "./images/photos/canvas/erratatv.jpg",
+    "./images/photos/canvas/etudiant-en-art-insta1.jpg",
+    "./images/photos/canvas/etudiant-en-art1.jpg",
+    "./images/photos/canvas/etudiantenart INSTA14-9.jpg",
+    "./images/photos/canvas/FauxFomoMaux-MelchiorMercure-gris-1.jpg",
+    "./images/photos/canvas/grimace-gloubi-1.jpg",
+    "./images/photos/canvas/IMG20220602115421.jpg",
+    "./images/photos/canvas/IMG20221114100103.jpg",
+    "./images/photos/canvas/king_felix-vortex-bal_tazar.jpg",
+    "./images/photos/canvas/leprincipedexplosion-tramé.jpg",
+    "./images/photos/canvas/melchior0024.jpg",
+    "./images/photos/canvas/Mmercure-nouvellesfraiches-1-trame.jpg",
+    "./images/photos/canvas/musiqueerrata.jpg",
+    "./images/photos/canvas/oiseauxx.jpg",
+    "./images/photos/canvas/P1220058.jpg",
+    "./images/photos/canvas/P1220059bis.jpg",
+    "./images/photos/canvas/sept220016.jpg",
+    "./images/photos/canvas/serpent.jpg",
+    "./images/photos/canvas/synthé.jpg",
     
 
 

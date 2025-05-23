@@ -11,28 +11,28 @@
 
 @font-face {
   font-family: "Antikor Mono Light Italic";
-  src: url("/fonts/Antikor_Mono\ Light_Italic.ttf") format("truetype");
+  src: url("./fonts/Antikor_Mono_Light_Italic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Antikor Mono Light";
-  src: url("/fonts/Antikor_Mono_Light.ttf") format("truetype");
+  src: url("./fonts/Antikor_Mono_Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Antikor Mono Regular";
-  src: url("/fonts/Antikor_Mono_Regular.ttf") format("truetype");
+  src: url("./fonts/Antikor_Mono_Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Antiko Mono Bold";
-  src: url("/fonts/Antikor_Mono_Bold.ttf") format("truetype");
+  src: url("./fonts/Antikor_Mono_Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

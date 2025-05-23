@@ -11,56 +11,34 @@
 
   @font-face {
     font-family: "Antikor Mono Light Italic";
-    src: url("/fonts/Antikor_Mono_Light_Italic.ttf") format("truetype");
+    src: url("./fonts/Antikor_Mono_Light_Italic.ttf") format("truetype");
     font-weight: 300;
     font-style: italic;
   }
 @font-face {
   font-family: "Antikor Mono Light";
-  src: url("/fonts/Antikor_Mono_Light.ttf") format("truetype");
+  src: url("./fonts/Antikor_Mono_Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
   @font-face {
     font-family: "Antikor Mono Bold Italic";
-    src: url("/fonts/Antikor_Mono_Bold_Italic.ttf") format("truetype");
+    src: url("./fonts/Antikor_Mono_Bold_Italic.ttf") format("truetype");
     font-weight: 700;
     font-style: italic;
   }
   @font-face {
   font-family: "Antikor Mono Regular";
-  src: url("/fonts/Antikor_Mono_Regular.ttf") format("truetype");
+  src: url("./fonts/Antikor_Mono_Regular.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
   @font-face {
     font-family: "Antikor Mono Bold";
-    src: url("/fonts/Antikor_Mono_Bold.ttf") format("truetype");
+    src: url("./fonts/Antikor_Mono_Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
   }
-
-@font-face {
-  font-family: "Spoqa Light";
-  src: url("/fonts/SpoqaHanSansNeo-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Spoqa Regular";
-  src: url("/fonts/SpoqaHanSansNeo-Regular.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Spoqa Bold";
-  src: url("/fonts/SpoqaHanSansNeo-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 
 a {
   color: inherit;
@@ -119,7 +97,7 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
 
-  background-image: url('/images/header_background.png');
+  background-image: url('./images/header_background.png');
   background-size: 100% 100%;   /* fill처럼 왜곡을 감수하고 꽉 채움 */
   background-repeat: no-repeat;
   background-position: center;
