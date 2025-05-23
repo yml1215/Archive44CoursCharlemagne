@@ -12,23 +12,23 @@
 }
 
 @font-face {
-  font-family: "Antikor_Light_Italic";
-  src: url("./fonts/AntikorMonoLightItalic.ttf") format("truetype");
+  font-family: "Antikor Light Italic";
+  src: url("./fonts/AntikorMonoLightItalic.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
-  font-family: "Antikor_Light";
-  src: url("./fonts/AntikorMonoLight.ttf") format("truetype");
+  font-family: "Antikor Light";
+  src: url("./fonts/AntikorMonoLight.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
-  font-family: "Antikor_Regular";
-  src: url("./fonts/AntikorMonoRegular.ttf") format("truetype");
+  font-family: "Antikor Regular";
+  src: url("./fonts/AntikorMonoRegular.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
-  font-family: "Antikor_Bold";
-  src: url("./fonts/AntikorMonoBold.ttf") format("truetype");
+  font-family: "Antikor Bold";
+  src: url("./fonts/AntikorMonoBold.woff2") format("woff2");
   font-display: swap;
 }
 
