@@ -47,9 +47,9 @@ body, html {
   color: black;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100dvw;
-  font-family: 'Antikor Regular';
+  height: 100vw;
+  width: 100vw;
+  font-family: "Antikor Regular";
 }
 /* --------------------------------------------------------------------------------------------------------- */
 .header {
@@ -140,10 +140,6 @@ body, html {
   font-size: 1rem;
   text-transform: uppercase;
 }
-/* .box9{
-  grid-column: 3 / 4;
-  grid-row: 4 / 5;
-} */
 /* --------------------------------------------------------------------------------------------------------- */
 .title{
   font-size: 1rem;
