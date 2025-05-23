@@ -143,7 +143,7 @@
           // 비처럼 note 이미지 떨어뜨리기
     const createFallingNote = () => {
       const note = document.createElement("img");
-      note.src = "/images/music_note.png"; // 사용 중인 note 이미지 경로
+      note.src = "./images/music_note.png"; // 사용 중인 note 이미지 경로
       note.classList.add("note");
       note.style.left = Math.random() * 100 + "vw";
       note.style.animationDuration = (3 + Math.random() * 3) + "s"; // 속도 랜덤
