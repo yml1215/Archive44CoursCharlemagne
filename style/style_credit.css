@@ -49,7 +49,6 @@ body, html {
   flex-direction: column;
   height: 100vw;
   width: 100vw;
-  font-family: "Antikor Regular";
 }
 /* --------------------------------------------------------------------------------------------------------- */
 .header {
@@ -76,7 +75,7 @@ body, html {
   width: 5%;
   height: 100%;
   justify-content: flex-end;
-  font-family: "Antikor Bold";
+  font-family: "Antikor Bold", sans-serif;
   font-size: 1.2rem;
 }
 /* --------------------------------------------------------------------------------------------------------- */
@@ -101,6 +100,7 @@ body, html {
   flex-direction: column;
   align-items: flex-start;   /* 수직: 위쪽 정렬 */
   justify-content: flex-start;
+  font-family: "Antikor Regular", sans-serif;
 }
 .box1{
   grid-column: 1 / 3;
