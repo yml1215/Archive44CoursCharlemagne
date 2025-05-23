@@ -239,7 +239,7 @@ body {
 }
 .description-fr > p:first-child{
   font-size: 1.1rem;
-  font-family: 'Antikor Bold', 'sans-serif';
+  font-family: "Antikor Bold", 'sans-serif';
 }
 /* .description-kr > p:first-child {
   color: var(--khaki);
@@ -269,12 +269,6 @@ body {
   font-size: 0.9rem;
   margin-right: 1rem;
   text-transform: uppercase;
-}
-.scrolling-text .kr {
-  font-family: 'Spoqa Light', 'sans-serif';
-  color: var(--blue);
-  font-size: 0.9vw;
-  margin-right: 2rem;
 }
 @keyframes scrollLoop {
   0% {
