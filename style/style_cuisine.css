@@ -9,36 +9,26 @@
   box-sizing: border-box;
 }
 
-  @font-face {
-    font-family: "Antikor Mono Light Italic";
-    src: url("./fonts/Antikor_Mono_Light_Italic.ttf") format("truetype");
-    font-weight: 300;
-    font-style: italic;
-  }
 @font-face {
-  font-family: "Antikor Mono Light";
-  src: url("./fonts/Antikor_Mono_Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
+  font-family: "Antikor_Light_Italic";
+  src: url("./fonts/AntikorMonoLightItalic.ttf") format("truetype");
+  font-display: swap;
 }
-  @font-face {
-    font-family: "Antikor Mono Bold Italic";
-    src: url("./fonts/Antikor_Mono_Bold_Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-  }
-  @font-face {
-  font-family: "Antikor Mono Regular";
-  src: url("./fonts/Antikor_Mono_Regular.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
+@font-face {
+  font-family: "Antikor_Light";
+  src: url("./fonts/AntikorMonoLight.ttf") format("truetype");
+  font-display: swap;
 }
-  @font-face {
-    font-family: "Antikor Mono Bold";
-    src: url("./fonts/Antikor_Mono_Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-  }
+@font-face {
+  font-family: "Antikor_Regular";
+  src: url("./fonts/AntikorMonoRegular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Antikor_Bold";
+  src: url("./fonts/AntikorMonoBold.ttf") format("truetype");
+  font-display: swap;
+}
 
 @keyframes blinkV {
   0%, 100% {
