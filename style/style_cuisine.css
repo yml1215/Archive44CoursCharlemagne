@@ -150,7 +150,7 @@ body::-webkit-scrollbar {
   bottom: 30vh;
   font-size: 2rem;
   color: var(--khaki);
-  font-family: "Antikor Bold", sans-serif;
+  font-family: "Antikor Regular", sans-serif;
   z-index: 99;
 }
 .entry-chambre svg{
@@ -164,9 +164,9 @@ body::-webkit-scrollbar {
   position: absolute;
   right: -30vw;
   bottom: 10vh;
-  font-size: 4rem;
+  font-size: 2rem;
   color: var(--khaki);
-  font-family: "Antikor Bold", sans-serif;
+  font-family: "Antikor Regular", sans-serif;
   z-index: 99;
 }
 .entry-atelier svg{
@@ -181,9 +181,9 @@ body::-webkit-scrollbar {
   left: 6vw;
   bottom: 15vh;
   font-size: 2rem;
-  font-family: "Antikor Bold", sans-serif;
+  font-family: "Antikor Regular", sans-serif;
   z-index: 99;
-  color: black;
+  color: var(--khaki);
 }
 .entry-couloir svg{
   width: 2rem;
