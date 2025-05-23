@@ -115,7 +115,7 @@ body::-webkit-scrollbar {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  font-family: 'Antikor Mono Regular', sans-serif;
+  font-family: 'Antikor Regular', sans-serif;
   text-transform: uppercase;
   color: var(--khaki);
 }
