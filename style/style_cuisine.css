@@ -208,8 +208,8 @@ body::-webkit-scrollbar {
   position: absolute;
   top: 0;
   left: 1.2vw;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   flex-shrink: 0;
   z-index: 99;
   animation: blinkV 1.5s infinite;
@@ -218,8 +218,8 @@ body::-webkit-scrollbar {
   position: absolute;
   top: 10vh;
   left: 50vw;
-  width: 30vw;
-  height: 20vw;
+  width: 35vw;
+  height: 25vw;
   overflow-y: auto;
   padding: 1rem;
   border-radius: 15px;
