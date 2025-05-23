@@ -71,7 +71,7 @@ body::-webkit-scrollbar {
   display: flex;
   z-index: 10;
   background-color: var(--beige);
-  background-image: url('./images/header_background2.png');
+  background-image: url('../images/header_background2.png');
   background-size: 100% 100%;   /* fill처럼 왜곡을 감수하고 꽉 채움 */
   background-repeat: no-repeat;
   background-position: center;
