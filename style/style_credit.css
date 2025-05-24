@@ -101,6 +101,7 @@ body, html {
   flex-direction: column;
   align-items: flex-start;   /* 수직: 위쪽 정렬 */
   justify-content: flex-start;
+  padding: 1rem;
 }
 .box1{
   grid-column: 1 / 3;
