@@ -161,7 +161,7 @@ body::-webkit-scrollbar {
 }
 .entry-atelier{
   position: absolute;
-  right: -60vw;
+  right: -20vw;
   bottom: 10vh;
   font-size: 2rem;
   font-family: "Antikor Bold", sans-serif;
