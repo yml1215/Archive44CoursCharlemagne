@@ -54,7 +54,6 @@ html, body {
   height: auto; /* 100% 고정에서 auto로 */
   min-height: 100vh;
   overflow: auto;
-  background-color: var(--beige);
 }
 
 body::-webkit-scrollbar {
