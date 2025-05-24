@@ -134,7 +134,7 @@ body::-webkit-scrollbar {
   width: 100vw;
   height: 100vh;
   transform: none;
-  background color: white;
+  background-color: white;
 }
 
 .floating-img {
