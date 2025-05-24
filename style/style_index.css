@@ -144,7 +144,8 @@ a, a:visited, a:hover, a:active {
 .container {
   display: flex;
   position: relative;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   background-image: url('../images/background.png');
   background-size: 100% 100%;   /* fill처럼 왜곡을 감수하고 꽉 채움 */
   background-repeat: no-repeat;
