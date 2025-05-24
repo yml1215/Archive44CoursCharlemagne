@@ -95,7 +95,7 @@ body, html {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 4fr 6fr 5fr 5fr;
   gap: 0.5rem; 
-  font-size: 0.8rem;
+  font-size: 1vw;
 }
 .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9{
   display: flex;
