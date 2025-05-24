@@ -151,7 +151,7 @@ a, a:visited, a:hover, a:active {
 #venez {
   position: fixed;
   z-index: 10;
-  left: 10vw;
+  left: -20vw;
   top: -20vh;
   width: 75vw;
   opacity: 0.8;
@@ -162,10 +162,10 @@ a, a:visited, a:hover, a:active {
   height: auto;
 }
 #venez.scrolled-down {
-  transform: translateX(10vw);
+  transform: translateX(30vw);
 }
 #venez.scrolled-up {
-  transform: translateX(-30vw);
+  transform: translateX(0vw);
 }
 
 /* 움직이는 건물 */
