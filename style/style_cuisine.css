@@ -147,14 +147,14 @@ body::-webkit-scrollbar {
 .entry-chambre{
   position: absolute;
   left: 6vw;
-  bottom: 15vh;
+  bottom: 20vh;
   font-size: 1.5rem;
   font-family: "Antikor Regular", sans-serif;
   z-index: 99;
   background-color: var(--beige);
   border: solid 1px var(--blue);
   border-radius: 15px;
-  padding: 1rem;
+  padding: 1rem 2rem 1rem 2rem;
 }
 .entry-chambre svg{
   width: 1.5rem;
@@ -173,7 +173,7 @@ body::-webkit-scrollbar {
   background-color: var(--beige);
   border: solid 1px var(--blue);
   border-radius: 15px;
-  padding: 1rem;
+  padding: 1rem 2rem 1rem 2rem;
 }
 .entry-couloir svg{
   width: 1.5rem;
@@ -192,7 +192,7 @@ body::-webkit-scrollbar {
   background-color: var(--beige);
   border: solid 1px var(--blue);
   border-radius: 15px;
-  padding: 1rem;
+  padding: 1rem 2rem 1rem 2rem;
 }
 .entry-atelier svg{
   width: 2rem;
