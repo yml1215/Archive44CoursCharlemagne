@@ -154,6 +154,7 @@ body::-webkit-scrollbar {
   background-color: var(--beige);
   border: solid 1px var(--blue);
   border-radius: 15px;
+  padding: 1rem;
 }
 .entry-chambre svg{
   width: 1.5rem;
@@ -172,6 +173,7 @@ body::-webkit-scrollbar {
   background-color: var(--beige);
   border: solid 1px var(--blue);
   border-radius: 15px;
+  padding: 1rem;
 }
 .entry-couloir svg{
   width: 1.5rem;
@@ -190,6 +192,7 @@ body::-webkit-scrollbar {
   background-color: var(--beige);
   border: solid 1px var(--blue);
   border-radius: 15px;
+  padding: 1rem;
 }
 .entry-atelier svg{
   width: 2rem;
