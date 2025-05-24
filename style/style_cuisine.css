@@ -148,30 +148,30 @@ body::-webkit-scrollbar {
   position: absolute;
   left: 6vw;
   bottom: 30vh;
-  font-size: 2rem;
+  font-size: 1rem;
   color: var(--khaki);
   font-family: "Antikor Regular", sans-serif;
   z-index: 99;
 }
 .entry-chambre svg{
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   flex-shrink: 0;
   z-index: 99;
   animation: blinkH 1.5s infinite;
 }
 .entry-atelier{
   position: absolute;
-  right: -30vw;
+  right: -40vw;
   bottom: 10vh;
-  font-size: 2rem;
+  font-size: 1rem;
   color: var(--khaki);
   font-family: "Antikor Regular", sans-serif;
   z-index: 99;
 }
 .entry-atelier svg{
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   flex-shrink: 0;
   z-index: 99;
   animation: blinkH 1.5s infinite;
@@ -180,14 +180,14 @@ body::-webkit-scrollbar {
   position: absolute;
   left: 6vw;
   bottom: 15vh;
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: "Antikor Regular", sans-serif;
   z-index: 99;
   color: var(--khaki);
 }
 .entry-couloir svg{
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   flex-shrink: 0;
   z-index: 99;
   animation: blinkH 1.5s infinite;
