@@ -147,7 +147,7 @@ body::-webkit-scrollbar {
 .entry-chambre{
   position: absolute;
   left: 6vw;
-  bottom: 30vh;
+  bottom: 20vh;
   font-size: 1.5rem;
   font-family: "Antikor Regular", sans-serif;
   z-index: 99;
