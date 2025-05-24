@@ -17,11 +17,8 @@ body {
   margin: 0;
   padding: 0;
   color: black;
-  background-image: url('../images/background.png');
-  background-size: 100% 100%;   /* fill처럼 왜곡을 감수하고 꽉 채움 */
-  background-repeat: no-repeat;
-  background-position: center;
-  overflow-y: hidden;
+  background-color: #DDEFE2;
+  overflow-y: auto;
   width: 100dvw;
   height: 100dvh;
   opacity: 0;
