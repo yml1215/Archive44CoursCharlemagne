@@ -148,8 +148,7 @@ body::-webkit-scrollbar {
   position: absolute;
   left: 6vw;
   bottom: 30vh;
-  font-size: 1rem;
-  color: var(--khaki);
+  font-size: 1.5rem;
   font-family: "Antikor Regular", sans-serif;
   z-index: 99;
 }
@@ -164,14 +163,13 @@ body::-webkit-scrollbar {
   position: absolute;
   right: -40vw;
   bottom: 10vh;
-  font-size: 1rem;
-  color: var(--khaki);
-  font-family: "Antikor Regular", sans-serif;
+  font-size: 2rem;
+  font-family: "Antikor Bold", sans-serif;
   z-index: 99;
 }
 .entry-atelier svg{
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   flex-shrink: 0;
   z-index: 99;
   animation: blinkH 1.5s infinite;
@@ -180,10 +178,9 @@ body::-webkit-scrollbar {
   position: absolute;
   left: 6vw;
   bottom: 15vh;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: "Antikor Regular", sans-serif;
   z-index: 99;
-  color: var(--khaki);
 }
 .entry-couloir svg{
   width: 1.5rem;
