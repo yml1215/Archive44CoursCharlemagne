@@ -81,7 +81,6 @@ body {
   padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
   position:fixed;
   z-index: 10; /* 다른 요소 위로 */
   transition: transform 0.5s ease;
