@@ -68,7 +68,7 @@ body::-webkit-scrollbar {
   height: 7vh;
   padding: 20px;
   display: flex;
-  justify-content: center;
+/*   justify-content: center; */
 
   background-image: url('../images/header_background3.png');
   background-size: 100% 100%;   /* fill처럼 왜곡을 감수하고 꽉 채움 */
