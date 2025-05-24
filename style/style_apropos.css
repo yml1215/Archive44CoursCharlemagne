@@ -49,6 +49,7 @@ body, html {
   flex-direction: column;
   height: 100vw;
   width: 100vw;
+  overflow-y: hidden;
 }
 /* --------------------------------------------------------------------------------------------------------- */
 .header {
