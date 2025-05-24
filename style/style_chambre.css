@@ -145,8 +145,6 @@ body::-webkit-scrollbar {
 .floating-img {
   position: absolute;
   transform-style: preserve-3d;
-  transition: transform 0.3s ease;
-  will-change: transform;
   cursor: pointer;
   transform-origin: center center;
   user-select: none;
@@ -154,7 +152,6 @@ body::-webkit-scrollbar {
 }
 
 .floating-img:hover {
-  transform: scale(1.1) translateZ(20px);
   z-index: 10;
 }
 
