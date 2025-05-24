@@ -145,6 +145,10 @@ a, a:visited, a:hover, a:active {
   display: flex;
   position: relative;
   width: 100%;
+  background-image: url('../images/background.png');
+  background-size: 100% 100%;   /* fill처럼 왜곡을 감수하고 꽉 채움 */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* VENZ 이미지 */
