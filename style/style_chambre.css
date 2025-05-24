@@ -126,12 +126,6 @@ body::-webkit-scrollbar {
 /* --------------------------------------------------------------------------------------------------------- */
 
 /* 3D 효과가 보이도록 perspective 적용 - floating-img 부모 요소에 추가 */
-.container {
-  position: relative;
-  perspective: 1000px;
-  overflow-x: hidden;
-  background-color: white;
-}
 
 #canvas {
   position: absolute;
@@ -140,6 +134,7 @@ body::-webkit-scrollbar {
   width: 100vw;
   height: 100vh;
   transform: none;
+  background color: white;
 }
 
 .floating-img {
