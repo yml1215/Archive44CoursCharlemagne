@@ -38,38 +38,23 @@ a, a:visited, a:hover, a:active {
 /* ✍️ 2. 폰트 설정                      */
 /* ------------------------------------ */
 @font-face {
-  font-family: "Antikor_Light_Italic";
-  src: url("/fonts/Antikor_Mono/Light_Italic.ttf") format("truetype");
+  font-family: "Antikor Light Italic";
+  src: url("./fonts/AntikorMonoLightItalic.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
-  font-family: "Antikor_Light";
-  src: url("/fonts/Antikor_Mono_Light.ttf") format("truetype");
+  font-family: "Antikor Light";
+  src: url("./fonts/AntikorMonoLight.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
-  font-family: "Antikor_Regular";
-  src: url("/fonts/Antikor_Mono_Regular.ttf") format("truetype");
+  font-family: "Antikor Regular";
+  src: url("./fonts/AntikorMonoRegular.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
-  font-family: "Antikor_Bold";
-  src: url("/fonts/Antikor_Mono_Bold.ttf") format("truetype");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Spoqa_Light";
-  src: url("/fonts/SpoqaHanSansNeo-Light.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Spoqa_Regular";
-  src: url("/fonts/SpoqaHanSansNeo-Regular.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Spoqa_Bold";
-  src: url("/fonts/SpoqaHanSansNeo-Bold.woff2") format("woff2");
+  font-family: "Antikor Bold";
+  src: url("./fonts/AntikorMonoBold.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -132,16 +117,9 @@ a, a:visited, a:hover, a:active {
 }
 
 .francais {
-  font-family: "Antikor_Light_Italic";
+  font-family: "Antikor Light Italic";
   font-size: 0.9vw;
   text-transform: uppercase;
-}
-
-.coreen {
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 300;
-  font-size: 0.8vw;
-  display: none;
 }
 
 .menu {
