@@ -18,7 +18,7 @@ body {
   padding: 0;
   color: black;
   background-color: #DDEFE2;
-  overflow-y: auto;
+  overflow-y: none;
   width: 100dvw;
   height: 100dvh;
   opacity: 0;
