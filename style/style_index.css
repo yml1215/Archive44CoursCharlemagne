@@ -155,7 +155,7 @@ a, a:visited, a:hover, a:active {
   height: auto;
 }
 #venez.scrolled-down {
-  transform: translateX(0vw);
+  transform: translateX(10vw);
 }
 #venez.scrolled-up {
   transform: translateX(-30vw);
