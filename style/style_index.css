@@ -17,10 +17,7 @@ body {
   margin: 0;
   padding: 0;
   color: black;
-  background-image: url('./images/background.png');
-  background-size: 100% 100%;   /* fill처럼 왜곡을 감수하고 꽉 채움 */
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #DDEFE2;
   overflow-y: auto;
   width: 100dvw;
   height: 100dvh;
@@ -41,23 +38,38 @@ a, a:visited, a:hover, a:active {
 /* ✍️ 2. 폰트 설정                      */
 /* ------------------------------------ */
 @font-face {
-  font-family: "Antikor Light Italic";
-  src: url("./fonts/AntikorMonoLightItalic.woff2") format("woff2");
+  font-family: "Antikor_Light_Italic";
+  src: url("/fonts/Antikor_Mono/Light_Italic.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
-  font-family: "Antikor Light";
-  src: url("./fonts/AntikorMonoLight.woff2") format("woff2");
+  font-family: "Antikor_Light";
+  src: url("/fonts/Antikor_Mono_Light.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
-  font-family: "Antikor Regular";
-  src: url("./fonts/AntikorMonoRegular.woff2") format("woff2");
+  font-family: "Antikor_Regular";
+  src: url("/fonts/Antikor_Mono_Regular.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
-  font-family: "Antikor Bold";
-  src: url("./fonts/AntikorMonoBold.woff2") format("woff2");
+  font-family: "Antikor_Bold";
+  src: url("/fonts/Antikor_Mono_Bold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Spoqa_Light";
+  src: url("/fonts/SpoqaHanSansNeo-Light.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Spoqa_Regular";
+  src: url("/fonts/SpoqaHanSansNeo-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Spoqa_Bold";
+  src: url("/fonts/SpoqaHanSansNeo-Bold.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -120,7 +132,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .francais {
-  font-family: "Antikor Light Italic", sans-serif;
+  font-family: "Antikor_Light_Italic";
   font-size: 0.9vw;
   text-transform: uppercase;
 }
@@ -137,7 +149,7 @@ a, a:visited, a:hover, a:active {
   width: 20px;
   height: 100%;
   justify-content: flex-end;
-  font-family: "Antikor Bold", sans-serif;
+  font-family: "Antikor Regular", sans-serif;
   font-size: 1.2rem;
 }
 
@@ -154,7 +166,7 @@ a, a:visited, a:hover, a:active {
 #venez {
   position: fixed;
   z-index: 10;
-  left: -20vw;
+  left: 10vw;
   top: -20vh;
   width: 75vw;
   opacity: 0.8;
@@ -165,10 +177,10 @@ a, a:visited, a:hover, a:active {
   height: auto;
 }
 #venez.scrolled-down {
-  transform: translateX(40vw);
+  transform: translateX(10vw);
 }
 #venez.scrolled-up {
-  transform: translateX(0vw);
+  transform: translateX(-30vw);
 }
 
 /* 움직이는 건물 */
