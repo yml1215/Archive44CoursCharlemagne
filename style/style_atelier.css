@@ -196,7 +196,7 @@ p{
   pointer-events: auto;
 }
 .box_reflex{
-  transform: translate(-110%, -10%);
+  transform: translate(-110%, -20%);
   width: 15vw;
 }
 .box_radio{
