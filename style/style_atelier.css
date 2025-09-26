@@ -196,14 +196,14 @@ p{
   pointer-events: auto;
 }
 .box_reflex{
-  transform: translate(-110%, -110%);
+  transform: translate(-110%, -80%);
   width: 15vw;
 }
 .box_radio{
-  transform: translate(0%, -170%);
+  transform: translate(0%, -130%);
 }
 .box_tv{
-  transform: translate(10%, -420%);
+  transform: translate(10%, -370%);
 }
 .icon{
   width: 2.5rem;
