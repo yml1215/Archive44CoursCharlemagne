@@ -115,7 +115,7 @@ body::-webkit-scrollbar {
     position: fixed;
     top: 7vh;
     left: 0;
-    height: 93vh;
+    /* height: 93vh; */
     width: 100vw;
     transition: transform 0.3s ease-out;
   }
